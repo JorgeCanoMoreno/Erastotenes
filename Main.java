@@ -1,32 +1,27 @@
 import java.util.Scanner;
 public class Main{
-    // Generar números primos de 1 a max
+    
     public static int[] generarPrimos (int max){
+
         int i,j;
         if (max >= 2) {
-
-
-        int tamanoArray = max + 1; // Tamaño del array
-        boolean[] esPrimo = new boolean[tamanoArray];
-
+            int tamanoArray = max + 1; // Tamaño del array
+            boolean[] esPrimo = new boolean[tamanoArray];
             inicializarArray(tamanoArray, esPrimo);
-
             cribaDatos(tamanoArray, esPrimo);
-
             int cuenta = recuentoPrimos(tamanoArray, esPrimo);
-
-    int[] primos = new int[cuenta];
+            int[] primos = new int[cuenta];
 
             for (i=0, j=0; i<tamanoArray; i++) {
                 if (esPrimo[i])
                     primos[j++] = i;
             }
             return primos;
-        } else {
+            
+            } else {
             return new int[0];
-
+            }
         }
-    }
 
     private static int recuentoPrimos(int tamanoArray, boolean[] esPrimo) {
         int i;
