@@ -5,7 +5,7 @@ public class Main{
 
         int i,j;
         if (max >= 2) {
-            int tamanoArray = max + 1; // Tamaño del array
+            int tamanoArray = max + 1; 
             boolean[] esPrimo = new boolean[tamanoArray];
             inicializarArray(tamanoArray, esPrimo);
             cribaDatos(tamanoArray, esPrimo);
